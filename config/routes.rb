@@ -2,9 +2,7 @@ Coursemanager::Application.routes.draw do
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
   resources :overviews
-  resources :participants do
-   match :assign, via: [:get, :post]
-end
+  resources :participants 
   resources :courses
   # You can have the root of your site routed with "root"
   #root 'welcome#index'
