@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Courses</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="container">
+       <header>
+	     <nav>
+      	   <ul class="pwc-logo">
+               <%= image_tag ("pwc-logo.jpg") %>
+		   </ul>
+	       <ul class="links">
+	          <% nav_items.each do |nav_item|%>
+			     <%= display_nav_item(nav_item[:displaytext], nav_item[:controllername],
+				 nav_item[:linkurl])%>
+			  <% end %>
+	       </ul>
+	     </nav>
+       </header>
+       <section id="main">	
+          <article> 	  
+		    <div class="flash notice">
+			<%= flash[:notice]%></div>
+			
+            <%= yield %>
+			</article>
+		  <aside>
+             <%= yield :aside%>
+          </aside>
+        </section>
+        <footer>
+           <p id="copyright"> <em> Copyright</em>&nbsp; &nbsp; &nbsp;<em><%= Date.today.year %></em></p>
+		   
+        </footer>
+ </div>
+</body>
+</html>

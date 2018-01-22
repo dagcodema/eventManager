@@ -1,0 +1,32 @@
+<h1>Alle Arrangementer</h1>
+<% content_for :aside do %>
+   <%= render partial: "sidebar" %>
+ <% end %>
+<% if @courses.size > 0 %>
+<table>
+ 	 <% @courses.each do |course| %>
+	   <tr>
+	      <td><%= image_tag(course.image_url, :class => 'list_image')%></td>
+	      <td>
+		       <dl>
+		         <dt><%= link_to course.name, course %></dt>
+		         <dt><%= truncate(strip_tags(course.description), :rows => 6) %></dt>
+				 </br>
+				 <dt>Dato: <%= course.start_date.strftime('%d-%m-%Y') %></dt>
+				 <dt>Tid: <%= course.start_time.strftime('%H:%M') %></dt>
+				 </br></br>
+				 <dt><%= link_to "Tilmeld dig her", new_participant_path %></dt>
+		       </dl>
+		  </td>
+		  <td>
+		       <%= link_to " Hvem deltager ?", course %>
+		  </td>
+		  <td></td>
+	   </tr>
+	 <% end %>
+   
+ </table>
+  <% else %>
+ <p><em> Ingen Arrangementer </em ></p>
+ <p><%= link_to "Opret Arrangement", new_course_path %></p>
+ <% end %>

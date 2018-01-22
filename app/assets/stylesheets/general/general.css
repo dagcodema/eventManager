@@ -1,0 +1,22 @@
+header {
+   background-color:#FFF8DC;
+   padding:2% 2% 1% 2%;
+   border-top-left-radius: 5px;
+   border-top-right-radius: 5px;
+}
+
+header pwc-logo#pwc-logo{
+	width:250px;
+	height:70px;
+	color:#fff;
+}
+
+alerts {
+    padding:10px;
+	font-style:italic;
+	color:#fff;
+}
+
+div.notice {
+	background-color:#90EE90;
+}

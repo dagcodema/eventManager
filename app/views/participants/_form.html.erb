@@ -1,0 +1,25 @@
+<%= form_for @participant, method: :post do |f| %>
+   <div> <%= f.label :arrangement %></br>
+         <%= f.collection_select :id, Course.order(:name), :id, :name, {:include_blank => 'Aktuelle Arrangementer'}%>
+   </div>
+   <div>
+        <%= f.label :fornavn %><br/>
+        <%= f.text_field :first_name %>
+   </div>
+   <div>
+        <%= f.label :efternavn %><br/>
+        <%= f.text_field :last_name %>
+   </div>
+   <div>
+        <%= f.label :'e-mail' %><br/>
+        <%= f.text_field :email %>
+   </div>
+   <div>
+        <%= f.label :'telefon nummer' %><br/>
+        <%= f.text_field :tlfnr %>
+   </div>
+   </br>
+   <div class="actions">
+         <%= f.submit @participant.new_record? ? "Tilmeld" : "Update Participant" %>
+   </div>
+<% end %>

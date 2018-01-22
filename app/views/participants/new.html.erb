@@ -1,0 +1,16 @@
+<h1>Tilmelding </h1>
+<% if @participant.errors.any? %>
+    <div id="errors">
+        <p>Please correct the following <%= pluralize(@participant.errors.count, "error") %>: </p>
+     <ul>
+    <% @participant.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+     <% end %>
+    </ul>
+</div>
+<% end %>
+
+<article class="form">
+  <%= render 'form'%>
+</article>
+

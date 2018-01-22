@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+# This model initially had no columns defined.  If you add columns to the
+# model remove the '{}' from the fixture names and add the columns immediately
+# below each fixture, per the syntax in the comments below
+#
+rails
+    name: Intro kursus til Ruby on Rails 
+    description: Begynder - Niveau 0. En kort introduktion til Ruby on Rails framework med et par eksempler.
+    dato: 2018/04/09
+    tid: 10:00:00
+    image_url: rails.png
+    
+db
+    name: DB-Workshop
+    description: Fra Begynder til Master.Grundprincipprne i databasenormalisering.
+    dato: 2018/05/16
+    tid: 10:00:00
+    image_url: db.png
+
+fest2018
+    name: Fest 2018
+    description: Reception og more...
+    dato: 2018/06/08
+    tid: 15:00:00
+    image_url: fest2018.png
+    

@@ -1,0 +1,24 @@
+
+<%= form_for @participant do |f| %>
+   
+   <div>
+        <%= f.label :firstname %><br/>
+        <%= f.text_field :first_name %>
+   </div>
+   <div>
+        <%= f.label :lastname %><br/>
+        <%= f.text_field :last_name %>
+   </div>
+   <div>
+        <%= f.label :'e-mail' %><br/>
+        <%= f.text_field :email %>
+   </div>
+   <div>
+        <%= f.label :'telefon nummer' %><br/>
+        <%= f.text_field :tlfnr %>
+   </div>
+   </br>
+   <div class="actions">
+         <%= f.submit "Tilmeld" %>
+   </div>
+<% end %>

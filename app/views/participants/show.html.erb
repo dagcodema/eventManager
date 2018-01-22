@@ -1,0 +1,8 @@
+<h1><%= @participant.first_name %>&nbsp; &nbsp; &nbsp;<%= @participant.last_name %></h1>
+<h2>Er tilmeldt: </h2>
+  <% if @participant.courses.size > 0 %>
+       <%= render partial: "courses/course" %>
+  <% else %>
+  <p><em> Ingen Arrangementer</em> </p>
+  <% end %>	   
+ 
