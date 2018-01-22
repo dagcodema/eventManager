@@ -7,9 +7,9 @@ class CoursesController < ApplicationController
       @course = Course.new
    end
    def create
-      @course = Course.new(params[:course].permit(:name, :slug, :description, :image_url, :start_date, :start_time))
+      @course = Course.new(params[:course].permit(:name, :description, :image_url, :start_date, :start_time))
 	  if @course.save
-      flash[:notice] = 'Arrengementet oprettet'	
+      flash[:notice] = 'Dit Arrangement er oprettet'	
       redirect_to @course
 	  else
 	    render 'new'

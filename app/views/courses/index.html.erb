@@ -15,13 +15,11 @@
 				 <dt>Dato: <%= course.start_date.strftime('%d-%m-%Y') %></dt>
 				 <dt>Tid: <%= course.start_time.strftime('%H:%M') %></dt>
 				 </br></br>
-				 <dt><%= link_to "Tilmeld dig her", new_participant_path %></dt>
+				 <dt><%= link_to "Tilmeld dig her", new_participant_path %>  &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;
+				      <%= link_to " Hvem deltager ?", course %>
+			     </dt>
 		       </dl>
 		  </td>
-		  <td>
-		       <%= link_to " Hvem deltager ?", course %>
-		  </td>
-		  <td></td>
 	   </tr>
 	 <% end %>
    

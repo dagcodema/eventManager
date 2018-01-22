@@ -6,7 +6,5 @@ class Participant < ActiveRecord::Base
 	validates :last_name, length: {minimum: 3}, presence: true
 	validates_format_of :email, :with => /\A[^@,\s]+@[^@,\s]+\.[^@,\s]+\z/ , presence: true
 	
-	def to_s
-	   "#{name} (#{course})"
-	end
+
 end

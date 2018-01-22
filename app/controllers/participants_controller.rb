@@ -11,10 +11,15 @@ class ParticipantsController < ApplicationController
    def create  
      @course = Course.find_by_name(params[:name])
      @participant = Participant.new(params[:participant].permit(:first_name, :last_name, :email, :tlfnr)) 
-	 @participant.save
+	 if @participant.save
 	 @participant.overviews.new(participant_id: @participant.id, course_id: params[:course])
-	 redirect_to @participant
+	 flash[:notice] = 'Du er tilmeldt'	
+     redirect_to @participant
+	 else
+	 render :new
+	 end
    end
+   
  
    def show
        @participant = Participant.find(params[:id])

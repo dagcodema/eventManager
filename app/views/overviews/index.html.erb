@@ -1,0 +1,7 @@
+<% if @overviews.size > 0 %>
+    <h2>Alle deltagere: &nbsp; &nbsp; &nbsp;</h2>
+       <%= render partial: "participants/participant" %>
+ <% else %>
+ <p><em> Ingen deltagere</em></p>
+ <p><%= link_to "Tilmeld dig her", new_participant_path %></p>
+ <% end %>	   
